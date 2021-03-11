@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item android:id="@+id/profileItem" android:title="Profile" android:icon="@drawable/proficonforp"/>
+        <item android:id="@+id/goalsItem" android:title="Goals" android:icon="@drawable/basariiconform"/>
+        <item android:id="@+id/todolistItem" android:title="To Do List" android:icon="@drawable/bekleyenlistp"/>
+        <item android:id="@+id/achievementsItem" android:title="Achievements" android:icon="@drawable/successiconforp"/>
+    </group>
+
+    <item android:title="Others">
+        <menu>
+            <item android:id="@+id/SettingsItem" android:title="Settings" android:icon="@drawable/ic_settings"/>
+            <item android:id="@+id/SupportItem" android:title="Support" android:icon="@drawable/gplay"/>
+        </menu>
+    </item>
+
+
+</menu>

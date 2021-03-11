@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_graph"
+    app:startDestination="@id/firstShowFragment">
+    <fragment
+        android:id="@+id/firstShowFragment"
+        android:name="com.berkantcanerkanat.betteru.FirstShowFragment"
+        android:label="fragment_first_show"
+        tools:layout="@layout/fragment_first_show" >
+        <action
+            android:id="@+id/action_firstShowFragment_to_firstUserFragment"
+            app:destination="@id/firstUserFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit" />
+        <action
+            android:id="@+id/action_firstShowFragment_to_menuFragment2"
+            app:destination="@id/menuFragment"
+            app:popUpTo="@id/firstShowFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"/>
+    </fragment>
+    <fragment
+        android:id="@+id/firstUserFragment"
+        android:name="com.berkantcanerkanat.betteru.FirstUserFragment"
+        android:label="fragment_first_user"
+        tools:layout="@layout/fragment_first_user" >
+        <action
+            android:id="@+id/action_firstUserFragment_to_menuFragment"
+            app:destination="@id/menuFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popUpTo="@id/firstUserFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.berkantcanerkanat.betteru.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit" />
+        <action
+            android:id="@+id/action_menuFragment_to_goalsFragment"
+            app:destination="@id/goalsFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit" />
+        <action
+            android:id="@+id/action_menuFragment_to_achFragment"
+            app:destination="@id/achFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit" />
+        <action
+            android:id="@+id/action_menuFragment_to_toDoListFragment"
+            app:destination="@id/toDoListFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"/>
+        <action
+            android:id="@+id/action_menuFragment_to_newReminderFragment"
+            app:destination="@id/newReminderFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"/>
+        <action
+            android:id="@+id/action_menuFragment_to_firstUserFragment"
+            app:destination="@id/firstUserFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"/>
+        <action
+            android:id="@+id/action_menuFragment_to_supportFragment"
+            app:destination="@id/supportFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"/>
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.berkantcanerkanat.betteru.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/goalsFragment"
+        android:name="com.berkantcanerkanat.betteru.goalsFragment"
+        android:label="fragment_item_list"
+        tools:layout="@layout/fragment_item_list" >
+        <action
+            android:id="@+id/action_goalsFragment_to_newGoalFragment"
+            app:destination="@id/newGoalFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/newGoalFragment"
+        android:name="com.berkantcanerkanat.betteru.NewGoalFragment"
+        android:label="fragment_new_goal"
+        tools:layout="@layout/fragment_new_goal" >
+        <action
+            android:id="@+id/action_newGoalFragment_to_goalsFragment"
+            app:destination="@id/goalsFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popUpTo="@id/newGoalFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/achFragment"
+        android:name="com.berkantcanerkanat.betteru.AchFragment"
+        android:label="fragment_ach"
+        tools:layout="@layout/fragment_ach" />
+    <fragment
+        android:id="@+id/toDoListFragment"
+        android:name="com.berkantcanerkanat.betteru.ToDoListFragment"
+        android:label="fragment_to_do_list"
+        tools:layout="@layout/fragment_to_do_list" >
+        <action
+            android:id="@+id/action_toDoListFragment_to_newTodo"
+            app:destination="@id/newTodo"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"/>
+    </fragment>
+    <fragment
+        android:id="@+id/newTodo"
+        android:name="com.berkantcanerkanat.betteru.todoandnotes.newTodo"
+        android:label="fragment_new_todo"
+        tools:layout="@layout/fragment_new_todo" >
+        <action
+            android:id="@+id/action_newTodo_to_toDoListFragment"
+            app:destination="@id/toDoListFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popUpTo="@id/newTodo"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/newReminderFragment"
+        android:name="com.berkantcanerkanat.betteru.newReminderFragment"
+        android:label="fragment_new_reminder"
+        tools:layout="@layout/fragment_new_reminder" >
+        <action
+            android:id="@+id/action_newReminderFragment_to_menuFragment"
+            app:destination="@id/menuFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_close_exit"
+            app:popUpTo="@id/newReminderFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/supportFragment"
+        android:name="com.berkantcanerkanat.betteru.SupportFragment"
+        android:label="fragment_support"
+        tools:layout="@layout/fragment_support" />
+</navigation>

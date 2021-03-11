@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BetterU</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_movies">MoviesActivity</string>
+    <string name="tab_text_1">watched</string>
+    <string name="tab_text_2">will be watched</string>
+    <string name="tab_text_3">new Movie</string>
+    <string name="open">Open></string>
+    <string name="close">Close></string>
+</resources>
